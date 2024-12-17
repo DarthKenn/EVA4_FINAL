@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <h2 class="text-center">¿Está seguro de eliminar esta reserva?</h2>
+    <p class="text-center">Reserva: {{ reserva.nombre }} - {{ reserva.fecha }} {{ reserva.hora }}</p>
+    <div class="text-center">
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="/reservas/" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
